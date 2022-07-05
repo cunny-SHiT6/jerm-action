@@ -33,8 +33,8 @@ export const run = async (input: Inputs): Promise<void> => {
     );
     core.info(`Results: ${JSON.stringify(lists)}`);
   } catch (err) {
-    if(err instanceof Error) core.error(`sumting wrong with something: ${err.name} ${err.message} ${err.stack || 'No Stack'}`);
-    else core.error(`sumting wrong with something: ${JSON.stringify(err)}`);
-    console.error(`sumting wrong with something:`, err);
+   // if(err instanceof Error) core.error(`sumting wrong with something: ${err.name} ${err.message} ${err.stack || 'No Stack'}`);
+   // else core.error(`sumting wrong with something: ${JSON.stringify(err)}`);
+   // console.error(`sumting wrong with something:`, err);
   }
 }
