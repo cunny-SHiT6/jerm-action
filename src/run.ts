@@ -27,14 +27,12 @@ export const run = async (input: Inputs): Promise<void> => {
         //Check if file size not zero and less than 40MB
         const stats = await fs.stat(i)
         if (stats.size > 0 && stats.size < 40 * 1024 * 1024) {
-          await doJerm(i, loc, config);
+          await doJerm(i, loc, config).catch(e=>{/* ช่างแม่ง */});
         }
       })
     );
     core.info(`Results: ${JSON.stringify(lists)}`);
   } catch (err) {
-   // if(err instanceof Error) core.error(`sumting wrong with something: ${err.name} ${err.message} ${err.stack || 'No Stack'}`);
-   // else core.error(`sumting wrong with something: ${JSON.stringify(err)}`);
-   // console.error(`sumting wrong with something:`, err);
+    // ช่างแม่มัน
   }
 }
